@@ -8,7 +8,7 @@ from getData import *
 class Handle(object):
     def POST(self):
         try:
-            webData = web.data()     #数据获取？？
+            webData = web.data()     #数据获取？？   请求包中的实体正文
             print "Handle Post webdata is ", webData   #后台打日志
             recMsg = receive.parse_xml(webData)      #难道是返回了self？
             if isinstance(recMsg, receive.Msg):
